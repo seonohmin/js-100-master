@@ -4,13 +4,16 @@
   const get = (target) => {
     return document.querySelector(target)
   }
+  const getAll = (target) => {
+    return document.querySelectorAll(target)
+  }
 
   const $todos = get('.todos')
   const $form = get('.todo_form')
   const $todoInput = get('.todo_input')
   const $pagination = get('.pagination')
   const API_URL = `http://localhost:3000/todos`
-  
+
   let currentPage = 1
   const totalCount = 53
   const pageCount = 5
@@ -211,6 +214,7 @@
   const init = () => {
     window.addEventListener('DOMContentLoaded', () => {
       getTodos()
+      pagination()
     })
 
     $form.addEventListener('submit', addTodo)
