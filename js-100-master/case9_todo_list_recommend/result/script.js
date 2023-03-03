@@ -15,7 +15,7 @@
   const API_URL = `http://localhost:3000/todos`
 
   let currentPage = 1
-  const totalCount = 53
+  const totalCount = 55
   const pageCount = 5
   const limit = 5
 
